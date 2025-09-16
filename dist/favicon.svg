@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#05070d" />
+  <g fill="url(#g)" font-family="'IBM Plex Mono', monospace" font-size="14" font-weight="600">
+    <text x="9" y="24">AI</text>
+    <text x="9" y="44">EN</text>
+    <text x="33" y="24">01</text>
+    <text x="33" y="44">10</text>
+  </g>
+  <rect x="6" y="6" width="52" height="52" rx="10" stroke="#00f5d4" stroke-opacity="0.2" fill="none" />
+</svg>
