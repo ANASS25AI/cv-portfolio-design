@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiSend, FiMapPin, FiPhone } from 'react-icons/fi';
 import emailjs from '@emailjs/browser';
@@ -9,6 +9,10 @@ const ContactSection = () => {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle');
   const [feedback, setFeedback] = useState('');
+
+  const mailHref = `mailto:${profile.email}`;
+  const phoneHref = `tel:${profile.phone.replace(/[^+\d]/g, '')}`;
+  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(profile.location)}`;
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -79,13 +83,18 @@ const ContactSection = () => {
           <h3 className="card__title">Direct Channels</h3>
           <ul className="card__list">
             <li>
-              <FiMail /> {profile.email}
+              <FiMail aria-hidden="true" />
+              <a href={mailHref}>{profile.email}</a>
             </li>
             <li>
-              <FiPhone /> {profile.phone}
+              <FiPhone aria-hidden="true" />
+              <a href={phoneHref}>{profile.phone}</a>
             </li>
             <li>
-              <FiMapPin /> {profile.location}
+              <FiMapPin aria-hidden="true" />
+              <a href={mapsHref} target="_blank" rel="noreferrer">
+                {profile.location}
+              </a>
             </li>
           </ul>
         </motion.div>
