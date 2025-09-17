@@ -1,6 +1,6 @@
 ﻿import { useEffect, useRef } from 'react';
 
-const symbols = 'アァカサタナハマヤャラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const symbols = 'アァカサタナハマヤャラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZⵜⴰⵎⴰⵣⵉⵖⵜⵜⴰⵎⴰⵣⵉⵗⵜ ⵝⴰⵎⴰⵣⵉⵗⵝ';
 
 const MatrixBackground = () => {
   const canvasRef = useRef(null);
