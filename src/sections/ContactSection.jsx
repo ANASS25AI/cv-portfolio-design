@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiSend, FiMapPin, FiPhone } from 'react-icons/fi';
-import emailjs from '@emailjs/browser';
 import SectionHeader from '../components/SectionHeader';
 import { profile } from '../data/profile';
+
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${encodeURIComponent(profile.email)}`;
 
 const ContactSection = () => {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -28,33 +29,33 @@ const ContactSection = () => {
       return;
     }
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-    if (!serviceId || !templateId || !publicKey) {
-      setFeedback('Email service is not configured yet. Update your Vite environment variables.');
-      setStatus('error');
-      return;
-    }
-
     setStatus('sending');
     setFeedback('Routing your message through the neural relay...');
 
     try {
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          from_name: name,
-          reply_to: email,
-          message,
-          destination: profile.email,
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        publicKey,
-      );
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          _subject: `Portfolio contact from ${name}`,
+          _replyto: email,
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || data.success === 'false' || data.success === false) {
+        const messageText = data.message || 'Form service returned an unexpected response.';
+        throw new Error(messageText);
+      }
+
       setStatus('success');
-      setFeedback('Transmission complete - I will get back to you shortly.');
+      setFeedback('Transmission complete - check your inbox for my reply soon.');
       setFormState({ name: '', email: '', message: '' });
     } catch (error) {
       console.error(error);
