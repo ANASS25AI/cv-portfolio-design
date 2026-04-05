@@ -27,6 +27,19 @@
   ],
   experience: [
     {
+      role: 'Co-Founder',
+      company: 'Moroccan Artificial Intelligence (MAI)',
+      period: '2026 - Present',
+      location: 'Morocco',
+      logo: '/logo_MAI.png',
+      website: 'https://moroccanai.dev/',
+      achievements: [
+        'Co-founded Moroccan Artificial Intelligence (MAI), a startup building practical AI products and initiatives for Moroccan and international teams.',
+        'Leading AI product strategy, solution architecture, and delivery partnerships from concept to deployment.',
+        'Building AI-powered solutions and fostering the AI ecosystem in Morocco and beyond.',
+      ],
+    },
+    {
       role: 'AI Engineer (Part-Time)',
       company: 'BitApp SRL',
       period: '04/2025 - 10/2025',

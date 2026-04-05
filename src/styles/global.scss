@@ -1602,6 +1602,69 @@ button:focus-visible {
   flex: 1;
 }
 
+/* Featured Experience Card with Logo */
+.experience-card--featured {
+  border-color: rgba(0, 245, 212, 0.4);
+  background: linear-gradient(135deg, rgba(0, 245, 212, 0.05), var(--card-bg));
+}
+
+.experience-card--featured .experience-header {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.experience-logo-wrapper {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(0, 245, 212, 0.2);
+}
+
+.experience-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.experience-header-content {
+  flex: 1;
+}
+
+.experience-role {
+  margin-bottom: 0.25rem;
+}
+
+.experience-company-row {
+  margin-bottom: 0.5rem;
+}
+
+.experience-company-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.experience-company-link:hover {
+  gap: 0.6rem;
+  color: var(--accent-strong);
+}
+
+.experience-company-link svg {
+  width: 14px;
+  height: 14px;
+}
+
 /* Education Section */
 .education-timeline {
   max-width: 800px;
@@ -1654,34 +1717,125 @@ button:focus-visible {
   height: 14px;
 }
 
-/* Projects Section */
-.projects-grid {
+/* Projects Section - New Design */
+.projects-container {
+  margin-top: 2.5rem;
+}
+
+.projects-grid-new {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.project-card {
+@media (min-width: 900px) {
+  .projects-grid-new {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card-new {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card-new:hover {
+  box-shadow: 0 20px 50px rgba(0, 245, 212, 0.15);
+  border-color: var(--accent-soft);
+}
+
+.project-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card-new:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(5, 7, 13, 0.8) 100%);
+  pointer-events: none;
+}
+
+.project-content {
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 0.75rem;
 }
 
-.project-card:hover {
-  box-shadow: 0 20px 40px rgba(0, 245, 212, 0.12);
+.project-title-new {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
 }
 
-.project-title {
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.project-description {
-  color: var(--text-secondary);
+.project-desc {
   font-size: 0.9rem;
-  line-height: 1.7;
-  flex: 1;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--accent);
+  background: rgba(0, 245, 212, 0.1);
+  border: 1px solid rgba(0, 245, 212, 0.2);
+  border-radius: 6px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.project-tag:hover {
+  background: rgba(0, 245, 212, 0.2);
+  border-color: rgba(0, 245, 212, 0.4);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 500;
+  transition: gap 0.2s ease;
+}
+
+.project-link:hover {
+  gap: 0.6rem;
+}
+
+.project-link svg {
+  width: 14px;
+  height: 14px;
 }
 
 /* Skills Section */
