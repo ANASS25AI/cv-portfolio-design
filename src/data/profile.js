@@ -1,47 +1,43 @@
 ﻿export const profile = {
   name: 'Anass Nassiri',
-  title: 'AI Engineer',
+  title: 'AI Engineer | ML Engineer',
   location: 'Milan, Italy',
   phone: '(+39) 351 309 5490',
   email: 'nassirri115@gmail.com',
   linkedin: 'https://www.linkedin.com/in/anass-nassiri-5487051a3/',
-  github: 'https://github.com/ANASS19',
+  github: 'https://github.com/ANASS25AI',
   summary:
-    'AI Engineer passionate about building intelligent systems that make a real impact. From machine learning and deep learning to LLMs, computer vision, and conversational AI — I thrive on turning complex AI concepts into practical, production-ready solutions. Always exploring the cutting edge of artificial intelligence.',
+    'AI Engineer and Master\'s student in Artificial Intelligence with hands-on experience in machine learning, deep learning, computer vision, LLM applications, RAG systems, and AI agents. Skilled in building intelligent applications from experimentation to deployment using Python, FastAPI, Docker, LangChain, and cloud-based workflows.',
   education: [
     {
-      degree: "Master's in Artificial Intelligence for Science and Technology",
+      degree: "Master's Degree in Artificial Intelligence for Science and Technology",
       period: '09/2023 - Present',
-      school:
-        'University of Milano-Bicocca, University of Milan, University of Pavia | Milan, Italy',
+      school: 'University of Milano-Bicocca, University of Milan, University of Pavia | Italy',
     },
     {
-      degree: "Bachelor's in Computer Science and Software Engineering",
-      period: '09/2021 - 06/2022',
-      school:
-        'Cadi Ayyad University High School of Technology | Essaouira, Morocco',
+      degree: "Bachelor's Degree in Computer Science and Software Engineering",
+      period: '09/2019 - 06/2022',
+      school: 'Cadi Ayyad University, Higher School of Technology | Essaouira, Morocco',
     },
     {
-      degree: 'University Diploma in Business Intelligence and Data Sciences',
+      degree: 'University Diploma in Business Intelligence and Data Science',
       period: '09/2019 - 06/2021',
-      school:
-        'Cadi Ayyad University High School of Technology | Essaouira, Morocco',
+      school: 'Cadi Ayyad University, Higher School of Technology | Essaouira, Morocco',
     },
   ],
   experience: [
     {
       role: 'AI Engineer (Part-Time)',
       company: 'BitApp SRL',
-      period: '04/2025 - 06/2025',
+      period: '04/2025 - 10/2025',
       location: 'Bologna, Italy',
       achievements: [
-        'Designed and deployed conversational AI agents based on the ReAct paradigm.',
-        'Built modular Retrieval-Augmented Generation pipelines with LangChain and Ollama.',
-        'Developed stateful multi-agent architectures with LangGraph and memory orchestration.',
-        'Implemented the Model Context Protocol to unify communication across agents and tools.',
-        'Created FastAPI services that expose agent capabilities to external frontends and data layers.',
-        'Optimized LLM inference with streaming, memory control, and intelligent tool routing.',
-        'Collaborated cross-functionally to ship production-grade AI systems with Docker and Git.',
+        'Designed and developed conversational AI agents using ReAct-based workflows for structured, tool-augmented, and multi-step interactions.',
+        'Built modular Retrieval-Augmented Generation (RAG) pipelines using LangChain, Ollama, and vector-based retrieval for domain-specific question answering.',
+        'Developed stateful multi-agent systems with LangGraph, including memory handling, routing logic, orchestration of tools, and context-aware control flow.',
+        'Implemented FastAPI services to expose AI capabilities through APIs for integration with external applications and user interfaces.',
+        'Worked on LLM inference optimization, streaming responses, prompt orchestration, and context management.',
+        'Contributed to production-oriented AI systems using Docker, Git, and deployment-oriented engineering workflows.',
       ],
     },
     {
@@ -50,9 +46,9 @@
       period: '04/2022 - 06/2022',
       location: 'Marrakech, Morocco',
       achievements: [
-        'Shipped a full-stack platform for fabric printing companies and designers.',
-        'Implemented responsive React interfaces across web and mobile breakpoints.',
-        'Developed RESTful services with Django REST Framework and designed MySQL schemas.',
+        'Designed and developed a full-stack platform for fabric printing companies and designers.',
+        'Built responsive front-end interfaces for web applications using React.',
+        'Developed REST APIs with Django REST Framework and designed relational database schemas in MySQL.',
       ],
     },
     {
@@ -61,147 +57,125 @@
       period: '07/2021 - 08/2021',
       location: 'Kenitra, Morocco',
       achievements: [
-        'Built a React.js and Tailwind CSS web app for stock management.',
-        'Developed Django REST APIs and delivered decision-ready data analyses.',
+        'Developed a web application for stock management using React.js and Tailwind CSS.',
+        'Built backend APIs with Django REST Framework and supported data analysis tasks.',
       ],
     },
   ],
   services: [
     {
-      title: 'AI Systems Consulting',
-      blurb: 'Blueprints for resilient, explainable AI ecosystems and product roadmaps.',
+      title: 'AI & ML Development',
+      blurb: 'End-to-end machine learning solutions from data preprocessing to model deployment and monitoring.',
       icon: 'FiCpu',
     },
     {
-      title: 'Conversational Agents & RAG',
-      blurb: 'Designing LangChain/LangGraph copilots, retrieval workflows, and MCP tool meshes.',
+      title: 'LLM & RAG Systems',
+      blurb: 'Building conversational AI agents, retrieval-augmented generation pipelines, and LLM-powered applications.',
       icon: 'FiMessageSquare',
     },
     {
-      title: 'Applied Machine Learning',
-      blurb: 'Computer vision, signal processing, and predictive modeling tuned for production.',
+      title: 'Computer Vision',
+      blurb: 'Image classification, object detection, and visual AI systems for real-world applications.',
       icon: 'FiAperture',
     },
     {
-      title: 'Full-Stack Engineering',
-      blurb: 'React frontends, Django/REST backends, and cloud-native delivery pipelines.',
+      title: 'Full-Stack Development',
+      blurb: 'React frontends, FastAPI/Django backends, and cloud-native deployment pipelines.',
       icon: 'FiLayers',
     },
     {
-      title: 'Tech Workshops & Mentoring',
-      blurb: 'Upskilling teams on AI fundamentals, prompt engineering, and responsible deployment.',
+      title: 'AI Consulting',
+      blurb: 'Strategic guidance on AI adoption, architecture design, and implementation roadmaps.',
       icon: 'FiUsers',
     },
   ],
   projects: [
     {
-      name: 'LLMs and RAG Platform',
+      name: 'LLM and RAG Assistant',
       description:
-        'Full-stack conversational AI with LangChain RAG, CSV vector storage, and Ollama LLM powering a polished, ChatGPT-style interface.',
+        'Full-stack conversational AI application using LangChain, Ollama, retrieval pipelines, and vector-based search for document-aware question answering with a React chat interface.',
+    },
+    {
+      name: 'Lemon Defect Detection System',
+      description:
+        'Computer vision system for lemon defect detection using fine-tuned MobileNetV2 and custom CNN with Grad-CAM visualizations for explainability.',
+    },
+    {
+      name: 'Human Activity Recognition',
+      description:
+        'Deep learning models (CNN, LSTM, hybrid architectures) for human activity recognition in smart home and ambient intelligence applications.',
     },
     {
       name: 'Handwritten Digit Recognition',
       description:
-        'CNN-based MNIST classifier with comparative experimentation across training pipelines and dataset preparation techniques.',
+        'Convolutional neural network for handwritten digit classification on MNIST with data preprocessing, training, and evaluation.',
     },
     {
-      name: 'Intelligent Monitoring & Control',
+      name: 'Multimodal Biometric Systems',
       description:
-        'Machine-learning lemon defect detection leveraging MobileNetV2, custom CNNs, and Grad-CAM for real-time edge deployment.',
-    },
-    {
-      name: 'Ambient Intelligence & Domotics Dataset',
-      description:
-        'Preprocessed HAR data for smart homes, exploring CNN, LSTM, and hybrid deep learning models with manual and automated features.',
-    },
-    {
-      name: 'Advanced Human System Interfaces',
-      description:
-        'Prototyped multimodal biometric systems, affective computing, and BCI experiments integrating EEG, GSR, and 3D sensing.',
-    },
-    {
-      name: 'Explainable Recommenders',
-      description:
-        'Investigated transparent ML and DL approaches for recommendation systems with explainability at the forefront.',
-    },
-    {
-      name: 'Big Imaging & Signal Analytics',
-      description:
-        'Implemented techniques to process and analyze high-volume imaging and signal datasets at scale.',
-    },
-    {
-      name: 'Embedded Intelligent Systems',
-      description:
-        'Integrated AI workflows into embedded platforms to deliver adaptive, on-device intelligence.',
+        'Projects involving multimodal biometrics, affective computing, and brain-computer interaction using EEG, GSR, and 3D camera data.',
     },
   ],
   skills: [
     {
-      label: 'AI / ML',
+      label: 'AI / Machine Learning',
       items: [
-        'Python',
-        'TensorFlow',
-        'Keras',
-        'Scikit-learn',
         'Machine Learning',
         'Deep Learning',
+        'Scikit-learn',
+        'TensorFlow',
+        'Keras',
+        'CNNs',
+        'LSTMs',
+        'Feature Engineering',
       ],
     },
     {
-      label: 'NLP & LLMs',
-      items: ['RAG', 'LangChain', 'LangGraph'],
+      label: 'LLMs / NLP / Agents',
+      items: ['LangChain', 'LangGraph', 'RAG', 'Ollama', 'Prompt Engineering', 'AI Agents', 'ReAct'],
     },
     {
-      label: 'Signal & Vision',
-      items: ['MATLAB', 'Computer Vision', 'OpenCV'],
+      label: 'Computer Vision',
+      items: ['OpenCV', 'Image Processing', 'CNN-based Vision', 'Grad-CAM', 'Visual Classification'],
     },
     {
-      label: 'Web Engineering',
-      items: [
-        'Django',
-        'Django REST Framework',
-        'React.js',
-        'Flask',
-        'HTML',
-        'Java',
-        'Spring',
-        'CSS',
-        'Tailwind',
-        'Sass',
-      ],
+      label: 'Backend / APIs',
+      items: ['FastAPI', 'Flask', 'Django', 'Django REST Framework', 'REST APIs'],
     },
     {
-      label: 'Data & Analytics',
-      items: ['MySQL', 'SQL', 'Data Analysis', 'Data Mining', 'Data Visualization', 'R'],
+      label: 'Frontend',
+      items: ['React.js', 'HTML', 'CSS', 'Tailwind CSS', 'SASS'],
     },
     {
-      label: 'Tooling',
-      items: [
-        'Git',
-        'Jupyter Notebook',
-        'Matplotlib',
-        'RESTful APIs',
-        'Agile Collaboration',
-      ],
+      label: 'Cloud / DevOps',
+      items: ['Docker', 'AWS Fundamentals', 'Linux', 'Git', 'Deployment Workflows'],
+    },
+    {
+      label: 'Programming',
+      items: ['Python', 'R', 'SQL', 'Java', 'JavaScript'],
+    },
+    {
+      label: 'Data & Tools',
+      items: ['MySQL', 'Data Analysis', 'Data Mining', 'MATLAB', 'Jupyter', 'Matplotlib'],
     },
   ],
   certifications: [
-    'Data Science (SoloLearn)',
-    'Machine Learning (SoloLearn)',
-    'Learn the Basics of Blockchain with Python (Codecademy)',
-    'Data Analysis Track (Udacity)',
-    'Full Stack Development Track (Udacity)',
+    'Data Science - SoloLearn',
+    'Machine Learning - SoloLearn',
+    'Learn the Basics of Blockchain with Python - Codecademy',
+    'Data Analysis Track - Udacity',
+    'Full Stack Development Track - Udacity',
   ],
   hackathons: [
-    'ESTE.ma - Built battle-ready C-programmed robots from scratch.',
-    '1337.ma Coding School - One-month low-level sprint across C, Linux, and shell.',
-    'Reply Hackathons, UNIMIB - Co-created LLM-powered AI agents.',
+    'Reply Hackathons, University of Milano-Bicocca - Built AI agent prototypes powered by LLMs',
+    '1337 Coding School - Intensive training in C, Linux, and Shell programming',
+    'ESTE.ma - Programmed robots in C for task-oriented problem solving',
   ],
   languages: [
     { name: 'Arabic', level: 'Native' },
-    { name: 'English', level: 'Proficient' },
-    { name: 'French', level: 'Proficient' },
-    { name: 'Italian', level: 'Basic' },
+    { name: 'English', level: 'Professional' },
+    { name: 'French', level: 'Professional' },
+    { name: 'Italian', level: 'Intermediate (B1)' },
   ],
 };
 

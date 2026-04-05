@@ -41,7 +41,7 @@ const Hero = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <p className="hero__eyebrow">AI Engineer | Tech Futurist</p>
+        <p className="hero__eyebrow">AI Engineer | Machine Learning Engineer</p>
         <h1 className="hero__title">{profile.name}</h1>
         <p className="hero__description">{profile.summary}</p>
         <div className="hero__links">
