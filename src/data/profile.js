@@ -13,16 +13,19 @@
       degree: "Master's Degree in Artificial Intelligence for Science and Technology",
       period: '09/2023 - Present',
       school: 'University of Milano-Bicocca, University of Milan, University of Pavia | Italy',
+      logos: ['/logo_university of milano-bicocca.png', '/unimi.png', '/logo_unipv_amaranto.png'],
     },
     {
       degree: "Bachelor's Degree in Computer Science and Software Engineering",
       period: '09/2019 - 06/2022',
       school: 'Cadi Ayyad University, Higher School of Technology | Essaouira, Morocco',
+      logos: ['/ESTE.jpeg'],
     },
     {
       degree: 'University Diploma in Business Intelligence and Data Science',
       period: '09/2019 - 06/2021',
       school: 'Cadi Ayyad University, Higher School of Technology | Essaouira, Morocco',
+      logos: ['/ESTE.jpeg'],
     },
   ],
   experience: [
@@ -44,6 +47,7 @@
       company: 'BitApp SRL',
       period: '04/2025 - 10/2025',
       location: 'Bologna, Italy',
+      logo: '/bitapp.jpeg',
       achievements: [
         'Designed and developed conversational AI agents using ReAct-based workflows for structured, tool-augmented, and multi-step interactions.',
         'Built modular Retrieval-Augmented Generation (RAG) pipelines using LangChain, Ollama, and vector-based retrieval for domain-specific question answering.',
@@ -58,6 +62,7 @@
       company: 'COMABOUT',
       period: '04/2022 - 06/2022',
       location: 'Marrakech, Morocco',
+      logo: '/comabout.jpg',
       achievements: [
         'Designed and developed a full-stack platform for fabric printing companies and designers.',
         'Built responsive front-end interfaces for web applications using React.',

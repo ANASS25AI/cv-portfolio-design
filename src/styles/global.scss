@@ -1666,18 +1666,44 @@ button:focus-visible {
 }
 
 /* Education Section */
-.education-timeline {
-  max-width: 800px;
+.education-grid {
+  display: grid;
+  gap: 1.5rem;
 }
 
-.education-item {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  margin-left: 1rem;
-  border-radius: 0;
-  clip-path: polygon(0 8%, 4% 0, 100% 0, 100% 92%, 96% 100%, 0 100%);
+.education-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.75rem;
+}
+
+.education-logos {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.education-logo-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(0, 245, 212, 0.2);
+}
+
+.education-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.education-content {
+  flex: 1;
 }
 
 .education-period {
@@ -1697,24 +1723,34 @@ button:focus-visible {
 
 .education-degree {
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .education-school {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
   color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.6;
 }
 
-.education-school svg {
-  color: var(--accent);
-  flex-shrink: 0;
-  margin-top: 0.2rem;
-  width: 14px;
-  height: 14px;
+@media (max-width: 600px) {
+  .education-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .education-logos {
+    gap: 0.5rem;
+  }
+  
+  .education-logo-wrapper {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .education-logo {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 /* Projects Section - New Design */
