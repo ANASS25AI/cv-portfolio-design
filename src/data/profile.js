@@ -7,7 +7,7 @@
   linkedin: 'https://www.linkedin.com/in/anass-nassiri-5487051a3/',
   github: 'https://github.com/ANASS19',
   summary:
-    'AI engineer and tech enthusiast blending research-grade machine intelligence with production-ready software. Passionate about multi-agent systems, RAG pipelines, and immersive interfaces that elevate human-machine collaboration.',
+    'AI Engineer passionate about building intelligent systems that make a real impact. From machine learning and deep learning to LLMs, computer vision, and conversational AI — I thrive on turning complex AI concepts into practical, production-ready solutions. Always exploring the cutting edge of artificial intelligence.',
   education: [
     {
       degree: "Master's in Artificial Intelligence for Science and Technology",
