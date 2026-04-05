@@ -1374,6 +1374,19 @@ nav li a:hover,
   box-shadow: 0 0 30px rgba(0, 245, 212, 0.5);
 }
 
+/* Download Button */
+.button--download {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.button--download:hover {
+  background: rgba(0, 245, 212, 0.15);
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.3);
+  color: var(--accent);
+}
+
 /* Hero Contact Info */
 .hero__contact-info {
   display: flex;

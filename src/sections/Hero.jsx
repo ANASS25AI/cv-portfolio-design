@@ -48,6 +48,13 @@ const Hero = () => (
           <a className="button button--primary" href="#contact">
             <FiMail /> Get in Touch
           </a>
+          <a 
+            className="button button--download" 
+            href="/Anass_CV.pdf" 
+            download="Anass_Nassiri_CV.pdf"
+          >
+            <FiDownload /> Download CV
+          </a>
           <a className="button" href={profile.linkedin} target="_blank" rel="noreferrer">
             <FiLinkedin /> LinkedIn
           </a>
