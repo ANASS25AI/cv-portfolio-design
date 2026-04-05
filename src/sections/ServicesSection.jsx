@@ -1,4 +1,4 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FiCpu, FiMessageSquare, FiAperture, FiLayers, FiUsers } from 'react-icons/fi';
 import SectionHeader from '../components/SectionHeader';
 import { profile } from '../data/profile';
@@ -14,21 +14,21 @@ const iconMap = {
 const ServicesSection = () => (
   <section className="section" id="services">
     <SectionHeader
-      eyebrow="Offerings"
-      title="Services engineered for AI-first teams"
-      description="From strategic roadmaps to hands-on delivery, I partner with product leaders to ship intelligent, measurable solutions."
+      eyebrow="Services"
+      title="What I Can Do For You"
+      description="From strategic AI roadmaps to hands-on implementation — partnering with teams to deliver intelligent, measurable solutions."
     />
     <motion.div
       className="grid services-grid"
       style={{ marginTop: '2.5rem' }}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={{
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: 0.12,
+            staggerChildren: 0.1,
           },
         },
       }}
@@ -43,12 +43,13 @@ const ServicesSection = () => (
               hidden: { opacity: 0, y: 24 },
               visible: { opacity: 1, y: 0 },
             }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
           >
             <div className="service-icon">
               <Icon size={26} />
             </div>
-            <h3 className="card__title dot-text">{service.title}</h3>
-            <p className="status-text">{service.blurb}</p>
+            <h3 className="card__title service-title">{service.title}</h3>
+            <p className="service-description">{service.blurb}</p>
           </motion.article>
         );
       })}

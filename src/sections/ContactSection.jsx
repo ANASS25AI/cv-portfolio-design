@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiSend, FiMapPin, FiPhone } from 'react-icons/fi';
+import { FiMail, FiSend, FiMapPin, FiPhone, FiLinkedin, FiGithub } from 'react-icons/fi';
 import SectionHeader from '../components/SectionHeader';
 import { profile } from '../data/profile';
 
@@ -24,13 +24,13 @@ const ContactSection = () => {
     event.preventDefault();
     const { name, email, message } = formState;
     if (!name || !email || !message) {
-      setFeedback('Please complete all fields before transmitting.');
+      setFeedback('Please fill in all fields before sending.');
       setStatus('error');
       return;
     }
 
     setStatus('sending');
-    setFeedback('Routing your message through the neural relay...');
+    setFeedback('Sending your message...');
 
     try {
       const response = await fetch(FORM_ENDPOINT, {
@@ -55,34 +55,41 @@ const ContactSection = () => {
       }
 
       setStatus('success');
-      setFeedback('Transmission complete - check your inbox for my reply soon.');
+      setFeedback('Message sent successfully! I\'ll get back to you soon.');
       setFormState({ name: '', email: '', message: '' });
     } catch (error) {
       console.error(error);
       setStatus('error');
-      setFeedback('Signal lost. Please retry or reach me directly at nassirri115@gmail.com.');
+      setFeedback(`Failed to send. Please email me directly at ${profile.email}`);
     }
   };
 
-  const statusClass = status === 'error' ? 'contact-status status-text' : 'contact-status';
+  const statusClass = status === 'error' 
+    ? 'contact-feedback contact-feedback--error' 
+    : status === 'success' 
+    ? 'contact-feedback contact-feedback--success'
+    : 'contact-feedback';
 
   return (
     <section className="section" id="contact">
       <SectionHeader
-        eyebrow="Signal"
-        title="Let's collaborate on the next frontier of AI"
-        description="Drop a line for collaborations, research partnerships, or speaking engagements."
+        eyebrow="Contact"
+        title="Let's Work Together"
+        description="Interested in collaboration, consulting, or just want to say hello? I'd love to hear from you."
       />
-      <div className="split" style={{ marginTop: '2.5rem' }}>
+      <div className="split contact-split" style={{ marginTop: '2.5rem' }}>
         <motion.div
-          className="card"
+          className="card contact-info-card"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="card__title">Direct Channels</h3>
-          <ul className="card__list">
+          <h3 className="card__title">Get in Touch</h3>
+          <p className="contact-intro">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          </p>
+          <ul className="card__list contact-list">
             <li>
               <FiMail aria-hidden="true" />
               <a href={mailHref}>{profile.email}</a>
@@ -98,49 +105,61 @@ const ContactSection = () => {
               </a>
             </li>
           </ul>
+          <div className="contact-social">
+            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="contact-social-link" aria-label="LinkedIn">
+              <FiLinkedin />
+            </a>
+            <a href={profile.github} target="_blank" rel="noreferrer" className="contact-social-link" aria-label="GitHub">
+              <FiGithub />
+            </a>
+          </div>
         </motion.div>
 
         <motion.form
           onSubmit={handleSubmit}
-          className="card"
+          className="card contact-form"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <div>
+          <h3 className="card__title">Send a Message</h3>
+          <div className="form-group">
             <label htmlFor="name">Your Name</label>
             <input
               id="name"
               name="name"
               type="text"
-              placeholder="Neo or Trinity"
+              placeholder="John Doe"
               value={formState.name}
               onChange={handleChange}
+              autoComplete="name"
             />
           </div>
-          <div>
-            <label htmlFor="email">Email</label>
+          <div className="form-group">
+            <label htmlFor="email">Email Address</label>
             <input
               id="email"
               name="email"
               type="email"
-              placeholder="you@example.com"
+              placeholder="john@example.com"
               value={formState.email}
               onChange={handleChange}
+              autoComplete="email"
             />
           </div>
-          <div>
-            <label htmlFor="message">Message</label>
+          <div className="form-group">
+            <label htmlFor="message">Your Message</label>
             <textarea
               id="message"
               name="message"
-              placeholder="Let's explore a new AI venture..."
+              placeholder="Tell me about your project or idea..."
               value={formState.message}
               onChange={handleChange}
+              rows="5"
             />
           </div>
-          <button className="button" type="submit" disabled={status === 'sending'}>
+          <button className="button button--primary button--full" type="submit" disabled={status === 'sending'}>
             <FiSend /> {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>
           {feedback && <p className={statusClass}>{feedback}</p>}

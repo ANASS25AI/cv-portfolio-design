@@ -1,34 +1,39 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { FiChevronRight } from 'react-icons/fi';
 import SectionHeader from '../components/SectionHeader';
 import { profile } from '../data/profile';
 
 const ExperienceSection = () => (
   <section className="section" id="experience">
     <SectionHeader
-      eyebrow="Mission Log"
-      title="Delivering intelligent systems from lab to production"
-      description="A journey across AI engineering, human-centric interfaces, and resilient software craftsmanship."
+      eyebrow="Experience"
+      title="Professional Journey"
+      description="Building intelligent systems from concept to production across AI, software engineering, and human-centric design."
     />
-    <div className="grid" style={{ marginTop: '2.5rem' }}>
-      {profile.experience.map((experience) => (
+    <div className="experience-grid" style={{ marginTop: '2.5rem' }}>
+      {profile.experience.map((experience, index) => (
         <motion.article
           key={experience.company}
-          className="card"
+          className="card experience-card"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, delay: index * 0.1 }}
         >
-          <div className="card__meta">
-            <span>{experience.period}</span>
-            <span>{experience.location}</span>
+          <div className="experience-header">
+            <div className="card__meta">
+              <span className="experience-period">{experience.period}</span>
+              <span className="experience-location">{experience.location}</span>
+            </div>
+            <h3 className="card__title">{experience.role}</h3>
+            <p className="experience-company">{experience.company}</p>
           </div>
-          <h3 className="card__title">
-            {experience.role} - {experience.company}
-          </h3>
-          <ul className="card__list">
+          <ul className="card__list experience-list">
             {experience.achievements.map((achievement) => (
-              <li key={achievement}>{achievement}</li>
+              <li key={achievement}>
+                <FiChevronRight aria-hidden="true" />
+                <span>{achievement}</span>
+              </li>
             ))}
           </ul>
         </motion.article>
